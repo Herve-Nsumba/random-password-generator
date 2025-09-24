@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Random Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="description">
+        <h2>Generate a <span class="colored">random password</span></h2>
+        <p>Never use an insecure password again</p>
+      </div>
+      <div class="options">
+        <div class="option">
+          <div class="round-words">
+            <div class="round-one"></div>
+            <label for="upperCase">Include UpperCase</label>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="upperCase" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="option">
+          <div class="round-words">
+            <div class="round-one"></div>
+            <label for="lowerCase">Include LowerCase</label>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="lowerCase" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="option">
+          <div class="round-words">
+            <div class="round-one"></div>
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="numbers" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="option">
+          <div class="round-words">
+            <div class="round-one"></div>
+            <label for="symbols">Include Symbols</label>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="symbols" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="password-length-container">
+        <label for="password-length">PASSWORD LENGTH</label>
+        <div class="slide-wrapper">
+          <input type="range" id="password-length" min="8" max="15" value="8" />
+          <span id="length-value">8</span>
+        </div>
+      </div>
+
+      <button class="generate" onclick="getRandomPasswords()">
+        GENERATE PASSWORDS
+      </button>
+
+      <div class="passwords">
+        <div class="pass" id="passOne"></div>
+        <div class="pass" id="passTwo"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
